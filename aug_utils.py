@@ -12,6 +12,7 @@ def random_flip(img, mask, u=0.5):
     if np.random.random() < u:
         img = image.flip_axis(img, 0)
         mask = image.flip_axis(mask, 0)
+        
     return img, mask
 
 def random_rotate(img, mask, rotate_limit=(-20, 20), u=0.5):
